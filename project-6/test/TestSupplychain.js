@@ -45,7 +45,8 @@ contract('SupplyChain', function(accounts) {
     // 1st Test
     it("Testing smart contract function harvestItem() that allows a farmer to harvest coffee", async() => {
         const supplyChain = await SupplyChain.deployed()
-        
+        await supplyChain.addFarmer(originFarmerID);
+
         // Declare and Initialize a variable for event
         var eventEmitted = false
         
@@ -56,7 +57,10 @@ contract('SupplyChain', function(accounts) {
         })
 
         // Mark an item as Harvested by calling function harvestItem()
-        await supplyChain.harvestItem(upc, originFarmerID, originFarmName, originFarmInformation, originFarmLatitude, originFarmLongitude, productNotes)
+        await supplyChain.harvestItem(
+          upc, originFarmerID, originFarmName, originFarmInformation, originFarmLatitude, originFarmLongitude, productNotes,
+          {from: originFarmerID},
+          )
 
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
         const resultBufferOne = await supplyChain.fetchItemBufferOne.call(upc)
@@ -87,7 +91,7 @@ contract('SupplyChain', function(accounts) {
         event.watch(() => eventEmitted = true);
 
         // Mark an item as Processed by calling function processItem()
-        await supplyChain.processItem(upc);
+        await supplyChain.processItem(upc, {from: originFarmerID});
 
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
         const resultBufferOne = await supplyChain.fetchItemBufferOne.call(upc);
@@ -118,7 +122,7 @@ contract('SupplyChain', function(accounts) {
         event.watch(() => eventEmitted = true);
 
         // Mark an item as Packed by calling function packItem()
-        await supplyChain.packItem(upc);
+        await supplyChain.packItem(upc,{from: originFarmerID});
 
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
         const resultBufferOne = await supplyChain.fetchItemBufferOne.call(upc);
@@ -149,7 +153,7 @@ contract('SupplyChain', function(accounts) {
         event.watch(() => eventEmitted = true);
 
         // Mark an item as Packed by calling function sellItem()
-        await supplyChain.sellItem(upc, productPrice);
+        await supplyChain.sellItem(upc, productPrice, {from: originFarmerID});
 
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
         const resultBufferOne = await supplyChain.fetchItemBufferOne.call(upc);

@@ -5,9 +5,16 @@ This repository containts an Ethereum DApp that demonstrates a Supply Chain flow
 ### Project details
 
 ```bash
-Contract address on Rinkeby network:
-  SupplyChain: 0x7ba53b2c5f15a1dcfbfa70a7e2cc3219e721c22c
-  Transaction Hash: 0xfb6c6002ec4e1d936aa048b40d06f251fb761a59783c86933d73e1e4c2d25935
+Version: 1.1.0
+  Contract address on Rinkeby network:
+    SupplyChain: 0xd6463186cfa38f944db8a9d2b78cbb072977b96f
+    Transaction Hash: 0xdfe7e99a5dfd816178487b3e91470b18a9046c86a3f0cc7c315325b0948711ef
+
+Version: 1.0.0
+  Contract address on Rinkeby network:
+    SupplyChain: 0x7ba53b2c5f15a1dcfbfa70a7e2cc3219e721c22c
+    Transaction Hash: 0xfb6c6002ec4e1d936aa048b40d06f251fb761a59783c86933d73e1e4c2d25935
+
 
 Truffle v4.1.14 (core: 4.1.14)
 Solidity v0.4.24 (solc-js)
@@ -15,7 +22,6 @@ Node v10.24.1
 web3 v1.2.1
 Ganache-cli
 
-Version: 1.0.0
 
 ## Getting Started
 

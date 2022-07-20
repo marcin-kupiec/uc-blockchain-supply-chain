@@ -1,7 +1,13 @@
+# Supply chain & data auditing
+
+This repository containts an Ethereum DApp that demonstrates a Supply Chain flow between a Seller and Buyer. The user story is similar to any commonly used supply chain process. A Seller can add items to the inventory system stored in the blockchain. A Buyer can purchase such items from the inventory system. Additionally a Seller can mark an item as Shipped, and similarly a Buyer can mark an item as Received.
+
 ### Project details
 
 ```bash
-Contract address on Rinkeby network: 0x5bFdE9825748B77bcffb60261D7B7039be8f7021
+Contract address on Rinkeby network:
+  SupplyChain: 0x7ba53b2c5f15a1dcfbfa70a7e2cc3219e721c22c
+  Transaction Hash: 0xfb6c6002ec4e1d936aa048b40d06f251fb761a59783c86933d73e1e4c2d25935
 
 Truffle v4.1.14 (core: 4.1.14)
 Solidity v0.4.24 (solc-js)
@@ -9,20 +15,7 @@ Node v10.24.1
 web3 v1.2.1
 Ganache-cli
 
-# Supply chain & data auditing
-
-This repository containts an Ethereum DApp that demonstrates a Supply Chain flow between a Seller and Buyer. The user story is similar to any commonly used supply chain process. A Seller can add items to the inventory system stored in the blockchain. A Buyer can purchase such items from the inventory system. Additionally a Seller can mark an item as Shipped, and similarly a Buyer can mark an item as Received.
-
-The DApp User Interface when running should look like...
-
-![truffle test](images/ftc_product_overview.png)
-
-![truffle test](images/ftc_farm_details.png)
-
-![truffle test](images/ftc_product_details.png)
-
-![truffle test](images/ftc_transaction_history.png)
-
+Version: 1.0.0
 
 ## Getting Started
 
